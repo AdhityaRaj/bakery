@@ -1,0 +1,119 @@
+<html>
+<head>
+<title>
+Bake-a-Holic|New Account
+</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Caveat|Pacifico&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="app.css">
+<style>
+table{border:3px solid	#DC143C;
+padding:10px;
+background-color:#ADD8E6;}
+input[id="1"]:focus
+{background-color:#FF69B4;}
+input[id="2"]:focus
+{background-color:		#FFC0CB;
+}
+</style>
+</head>
+<body style="background-image:url('res/7.jpg');background-fit:strech;">
+<!-- Navbar starts -->
+<nav class="navbar navbar-default navbar-fixed-top" id="nav">
+            <div class="container">
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-nav-demo" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                  <a href="index.html" id="brand" class="navbar-brand">
+                    Bake-a-Holic
+                  </a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-nav-demo">
+                  <ul class="nav navbar-nav">
+                    <li><a href="index.html"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+                    <li><a href="about us.html"><span class="glyphicon glyphicon-info-sign"></span> About</a></li>
+                    <li><a href="menu.html"><span class="glyphicon glyphicon-cutlery"></span> Menu</a></li>
+                    <li><a href="gallery.html"><span class="glyphicon glyphicon-picture"></span> Gallery</a></li>
+                    <li><a href="Ourbranches.html"><span class="glyphicon glyphicon-globe"></span> Outlets</a></li>
+                    <li><a href="contactus.html"><span class="glyphicon glyphicon-phone-alt"></span> Contact Us</a></li>
+                  </ul>
+                  <ul class="nav navbar-nav navbar-right">
+                      <li><a href="cana.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                    <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                  </ul>
+                </div><!-- /.navbar-collapse -->
+            </div>
+        </nav>
+<!-- Navbar ends -->
+<form name="login1" onsubmit="login()"><center><br><br><br><br><br><br><br>
+<table>
+<tr><td colspan="3" style="color:#228B22;font-size:25px;";><b><center>New Account</center></b></td></tr>
+<tr><td style="color:#C71585";><b>First Name</b></td><td>:</td><td><input id="1" type="text" name="fn"/></td></tr>
+<tr><td style="color:#FF1493";><b>Last Name</b></b></td><td>:</td><td><input id="2" type="text" name="ln"/></td></tr>
+<tr><td style="color:#C71585";><b>User Name</b></td><td>:</td><td><input id="1" type="text" name="us"/></td></tr>
+<tr><td style="color:#FF1493";><b>Password</b></td><td>:</td><td><input id="2" type="password" name="pass"/></td></tr>
+<tr><td style="color:#C71585";><b>Confirm Password</b></td><td>:</td><td><input id="1" type="password" name="cpass"/></td></tr>
+<tr><td style="color:#FF1493";><b>Age</b></td><td>:</td><td><input id="2" type="number" name="age"/></td></tr>
+<tr><td style="color:#C71585";><b>Gender</b></td><td>:</td><td><input type="radio" name="gender">Male</input></td></tr>
+<tr><td></td><td>:</td><td><input type="radio" name="gender">Female</input></td></tr>
+<tr><td></td><td>:</td><td><input type="radio" name="gender">Others</input></td></tr>
+<tr><td style="color:#FF1493";><b>e-mail</b></td><td>:</td><td><input id="2" type="text" name="mail"/></td></tr>
+<tr><td style="color:#C71585";><b>Address</b></td><td>:</td><td><input id="1" type="text" name="add"/></td></tr>
+<tr><td style="color:#FF1493";><b>Phone Number</b></td><td>:</td><td><input id="2" type="number" name="pn"/></td></tr>
+<tr><td colspan="3"><center><input style="background-color:gold;" type="submit"/></center></td></tr>
+</table></center>
+</form>
+<script>
+function login(){
+var fn,lfn,lln,lpass,lcpass,lun,ln,un,pass,cpass,age,gen,mail,add,pn,dmail,amail;
+fn=document.login1.fn.value;
+ln=document.login1.ln.value;
+un=document.login1.us.value;
+pass=document.login1.pass.value;
+cpass=document.login1.cpass.value;
+age=document.login1.age.value;
+gen=document.login1.gender.value;
+mail=document.login1.mail.value;
+add=document.login1.add.value;
+pn=document.login1.pn.value;
+lfn=fn.length;
+lln=ln.length;
+lun=un.length;
+lcpass=cpass.length;
+lpass=pass.length;
+if(fn==""){window.alert("Enter the FIRST NAME");}
+if(fn!=""&&lfn<5){window.alert("First name should have a minimum of 5 characters");}
+if(fn!=""&&16<lfn){window.alert("First name should have a maximum of 15 characters");}
+if(ln==""){window.alert("Enter the LAST NAME");}
+if(ln!=""&&lln<5){window.alert("Last name should have a minimum of 5 characters");}
+if(ln!=""&&16<lln){window.alert("Last name should have a maximum of 15 characters");}
+if(un==""){window.alert("Enter the USER NAME");}
+if(un!=""&&lun<5){window.alert("User name should have a minimum of 5 characters");}
+if(un!=""&&16<lun){window.alert("User name should have a maximum of 15 characters");}
+if(pass==""){window.alert("Enter the PASSWORD");}
+if(pass!=""&&lpass<6){window.alert("Enter a PASSWORD more than 6 characters");}
+if(cpass==""){window.alert("Enter the CONFIRM PASSWORD");}
+if(lpass!=""&&lcpass!=""&&pass!=cpass){window.alert("PASSWORD not matches");}
+if(age==""){window.alert("Enter the AGE");}
+if(age!=""&&isNaN(age)){window.alert("Enter the number in AGE");}
+if(gen==""){window.alert("Select the GENDER");}
+if(mail==""){window.alert("Enter the E-MAIL");}
+amail=mail.indexOf("@");
+dmail=mail.indexOf(".");
+if(mail!=""&&(mail.length<1||amail<1||dmail<amail+2||dmail+3>mail.length)){window.alert("EMAIL not valid");}
+if(add==""){window.alert("Enter the ADDRESS");}
+if(pn==""){window.alert("Enter the PHONE NUMBER");}
+if(pn!=""&&pn.length>11||pn<0){window.alert("Enter a valid PHONE NUMBER");}}
+</script>
+<!-- scripts -->
+<script src="app.js" charset="utf-8"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+</html>
